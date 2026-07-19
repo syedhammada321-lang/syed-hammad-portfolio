@@ -2,6 +2,8 @@
 
 Public portfolio website for Syed Hammad Ali, Creative Manager and multidisciplinary designer.
 
+**Live website:** https://syedhammada321-lang.github.io/syed-hammad-portfolio/
+
 ## Stack
 
 - Next.js 15 with static export
