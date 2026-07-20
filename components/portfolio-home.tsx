@@ -93,7 +93,8 @@ export function PortfolioHome() {
           <motion.div className="hero-art" style={{ y: artY }} data-hero-meta>
             <span className="art-index">20<br />26</span>
             <div className="art-orbit" aria-hidden="true" />
-            <Image src={assetPath("/assets/hero-chrome-sha.webp")} alt="Sculptural chrome SHA monogram" fill priority sizes="(max-width: 900px) 100vw, 52vw" />
+            <Image className="hero-portrait" src={assetPath("/assets/portrait-syed-hammad.webp")} alt="Portrait of Syed Hammad Ali, Creative Manager" fill priority sizes="(max-width: 800px) 100vw, 48vw" />
+            <span className="portrait-mark" aria-hidden="true">SHA</span>
             <div className="hero-location"><MapPin size={19} aria-hidden="true" /> Karachi, Pakistan</div>
           </motion.div>
           <a href="#work" className="scroll-cue" aria-label="Scroll to selected work">Scroll <ArrowDown size={15} /></a>
@@ -121,6 +122,7 @@ export function PortfolioHome() {
           <div className="section-main">
             <Reveal><p className="kicker">Designing across dimensions</p><h2 id="about-title" className="statement">I turn business needs into <em>clear, memorable</em> visual experiences—then guide them all the way to delivery.</h2></Reveal>
             <div className="about-grid">
+              <Reveal><div className="about-portrait-wrap"><Image src={assetPath("/assets/portrait-syed-hammad.webp")} alt="Syed Hammad Ali, Creative Manager and multidisciplinary designer" fill sizes="(max-width: 800px) 88vw, 25vw" /></div></Reveal>
               <Reveal><p className="body-large">My practice sits between brand thinking and hands-on craft. That means I can lead the direction, build the system and stay close to the details across graphic design, motion, video and 3D visualization.</p></Reveal>
               <div className="stat-grid"><Reveal><div><strong>13+</strong><span>Years of creative experience</span></div></Reveal><Reveal delay={0.08}><div><strong>04</strong><span>Core creative disciplines</span></div></Reveal></div>
             </div>
