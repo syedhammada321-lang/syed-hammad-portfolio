@@ -14,7 +14,7 @@ export function MagneticLink({ href, children, inverted = false }: { href: strin
     if (reduced) return;
     const rect = event.currentTarget.getBoundingClientRect();
     x.set((event.clientX - rect.left - rect.width / 2) * 0.035);
-    y.set((event.clientY - rect.top - rect.height / 2) * 0.16);
+    y.set((event.clientY - rect.top - rect.height / 2) * 0.035);
   }
 
   return (
