@@ -243,11 +243,13 @@ footer > p { grid-column: 1 / -1; align-self: end; }
   .mobile-menu a span { color: var(--orange); font-size: 10px; }
   .hero { min-height: auto; grid-template-columns: 1fr; padding-bottom: 0; }
   .hero-rail { display: none; }
-  .hero-copy { min-height: 73vh; padding: 62px 22px 36px; }
+  .hero-copy { min-height: auto; padding: 56px 22px 54px; justify-content: flex-start; }
   .hero h1 { max-width: 100%; font-size: clamp(62px, 21vw, 104px); line-height: .82; letter-spacing: -.075em; }
-  .hero-intro { margin-top: 48px; }
+  .hero-intro { margin-top: 36px; }
   .hero-art { height: clamp(420px, 105vw, 620px); min-height: 0; border-left: 0; border-top: 1px solid var(--line); }
-  .hero-art::before { inset: 6% 5% 14%; }
+  .hero-art::before, .hero-art::after, .art-orbit { display: none; }
+  .hero-art .hero-portrait { object-position: 50% 25%; transform: none; }
+  .portrait-mark { left: 22px; bottom: 76px; font-size: clamp(48px, 12vw, 68px); }
   .hero-location { height: 56px; padding: 0 22px; }
   .scroll-cue { display: none; }
   .section { grid-template-columns: 1fr; }
@@ -296,9 +298,9 @@ footer > p { grid-column: 1 / -1; align-self: end; }
   .menu-toggle { right: 9px; }
   .mobile-menu { padding: 20px 18px 30px; }
   .mobile-menu a { font-size: 27px; }
-  .hero-copy { min-height: calc(100svh - var(--header-h)); padding: 52px 18px 38px; }
+  .hero-copy { min-height: auto; padding: 48px 18px 48px; }
   .hero h1 { font-size: clamp(58px, 20.5vw, 96px); line-height: .83; }
-  .hero-intro { margin-top: 42px; }
+  .hero-intro { margin-top: 32px; }
   .hero-intro > p:not(.eyebrow) br { display: none; }
   .hero-art { height: clamp(420px, 112vw, 580px); }
   .hero-location { padding-inline: 18px; font-size: 14px; }
@@ -345,8 +347,10 @@ footer > p { grid-column: 1 / -1; align-self: end; }
   .site-header { padding-inline: 15px; gap: 10px; }
   .header-name { max-width: 118px; font-size: 8.5px; letter-spacing: .1em; }
   .menu-toggle { right: 6px; }
-  .hero-copy { padding-inline: 16px; }
+  .hero-copy { padding: 44px 16px 44px; }
   .hero h1 { font-size: clamp(56px, 20vw, 82px); }
+  .hero-intro { margin-top: 28px; }
+  .portrait-mark { left: 16px; bottom: 72px; }
   .eyebrow { font-size: 11px; }
   .magnetic-link { min-width: min(220px, 100%); }
   .section-main { padding-inline: 16px; }
