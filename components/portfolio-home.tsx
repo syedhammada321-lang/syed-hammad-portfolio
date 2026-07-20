@@ -89,6 +89,7 @@ export function PortfolioHome() {
               <p>13 years shaping brands through<br />design, motion and spatial experiences.</p>
               <MagneticLink href="#work">View selected work</MagneticLink>
             </div>
+            <a href="#work" className="scroll-cue" aria-label="Scroll to selected work">Scroll <ArrowDown size={15} /></a>
           </div>
           <motion.div className="hero-art" style={{ y: artY }} data-hero-meta>
             <span className="art-index">20<br />26</span>
@@ -97,7 +98,6 @@ export function PortfolioHome() {
             <span className="portrait-mark" aria-hidden="true">SHA</span>
             <div className="hero-location"><MapPin size={19} aria-hidden="true" /> Karachi, Pakistan</div>
           </motion.div>
-          <a href="#work" className="scroll-cue" aria-label="Scroll to selected work">Scroll <ArrowDown size={15} /></a>
         </section>
 
         <section id="work" className="section work-section" aria-labelledby="work-title">
