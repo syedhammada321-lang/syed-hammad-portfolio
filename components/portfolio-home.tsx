@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowDown, ArrowUpRight, MapPin, Menu, X } from "lucide-react";
-import { AnimatePresence, motion, useReducedMotion, useScroll, useSpring, useTransform } from "framer-motion";
+import { AnimatePresence, motion, useReducedMotion, useScroll, useSpring } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { CustomCursor } from "@/components/custom-cursor";
@@ -34,7 +34,6 @@ export function PortfolioHome() {
   const reduced = useReducedMotion();
   const { scrollYProgress } = useScroll();
   const progress = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
-  const artY = useTransform(scrollYProgress, [0, 0.22], [0, reduced ? 0 : 70]);
 
   useEffect(() => {
     if (!hero.current || reduced) return;
@@ -89,15 +88,15 @@ export function PortfolioHome() {
               <p>13 years shaping brands through<br />design, motion and spatial experiences.</p>
               <MagneticLink href="#work">View selected work</MagneticLink>
             </div>
-            <a href="#work" className="scroll-cue" aria-label="Scroll to selected work">Scroll <ArrowDown size={15} /></a>
           </div>
-          <motion.div className="hero-art" style={{ y: artY }} data-hero-meta>
+          <motion.div className="hero-art" data-hero-meta>
             <span className="art-index">20<br />26</span>
             <div className="art-orbit" aria-hidden="true" />
             <Image className="hero-portrait" src={assetPath("/assets/portrait-syed-hammad.webp")} alt="Portrait of Syed Hammad Ali, Creative Manager" fill priority sizes="(max-width: 800px) 100vw, 48vw" />
             <span className="portrait-mark" aria-hidden="true">SHA</span>
             <div className="hero-location"><MapPin size={19} aria-hidden="true" /> Karachi, Pakistan</div>
           </motion.div>
+          <a href="#work" className="scroll-cue" aria-label="Scroll to selected work">Scroll <ArrowDown size={15} /></a>
         </section>
 
         <section id="work" className="section work-section" aria-labelledby="work-title">
